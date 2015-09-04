@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>诚客兼职</title>
+    <meta name="keywords" content="兼职，大学生，真实，100%，无中介" />
+    <meta name="description" content="" />
+    <!--主页可被检索，页面上链接可被查询-->
+    <meta name="robots" content="index,follow" />
+    <!--使用goole内核进行渲染-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+    <!--移动端页面-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.3,maximum-scale=2.0,user-scalable=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capanle" />
+    <meta content="black" name="apple-mobile-apps-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--图标显示-->
+    <link rel="shortcut icon" href="img/icon.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="materialize/css/materialize.css" />
+    <link rel="stylesheet" href="materialize/css/materializeStyle.css">
+
+    <!--jQuery-->
+    <script type="text/javascript" src="script/jquery-1.8.3.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <script type="text/javascript" src="script/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="white grey-text">
+    <div class="nav-wrapper" >
+        <a href="index.html" title="诚客兼职" class="brand-logo" id="logo-container">
+            <img src="img/logo.png" alt="logo" />
+        </a>
+        <ul class="right hide-on-med-and-down" style="width:45%">
+            <li><a href="#" class="white grey-text btn btn-large waves-effect waves-red" id="hotjob">热门兼职</a></li>
+           <!-- <li><a href="#" class="white grey-text btn btn-large waves-effect waves-red" id="highPeo">兼职达人</a></li>-->
+           <!-- <li><a href="#" class="white grey-text btn btn-large waves-effect waves-red">关于我们</a></li>-->
+            <li><a href="firm-index.html" class="white grey-text btn btn-large waves-effect waves-red">商家入口</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="#" class="white black-text btn btn-large waves-effect waves-red">热门兼职</a></li>
+            <!--<li><a href="#" class="white black-text btn btn-large waves-effect waves-red">关于我们</a></li>
+            <li><a href="#" class="white black-text btn btn-large waves-effect waves-red">兼职达人</a></li>-->
+            <li><a href="firm-index.html" class="white black-text btn btn-large waves-effect waves-red">商家入口</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse btn-large orange darken-4" ><i class="mdi-navigation-menu"></i></a>
+    </div>
+</nav>
+
+<div class="parallax-container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col s6" id="poster">
+                    <img src="img/biaoti3.png" alt="诚客兼职,一呼百应" style="margin-left:12%;width:100%;height:auto;"/>
+                </div>
+                <div class="input-field col s6" id="search_box">
+                    <i class="mdi-action-search prefix"></i>
+                    <label for="">找到你想要的兼职</label>
+                    <input id="icon_search" type="text" class="validate" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="img/bg.jpg" alt="背景图片" /></div>
+</div>
+
+</div>
+<div class="main_page">
+
+    <!--热门推荐-->
+    <div class="middle" id="hot">
+        <div class="middle_title">
+            <h3>热门兼职推荐</h3>
+        </div>
+        <!--热门兼职信息显示-->
+        <div class="middle_hotinfo">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+    <!--达人（expert）排行-->
+    <!--<div class="expert">
+        <div class="expert_title" id="high">
+            <h3>一周兼职达人</h3>
+        </div>
+        &lt;!&ndash;排行榜&ndash;&gt;
+        <div class="expert_rank">
+                <ul>
+                    <li>
+                        <div class="expert_rank_head"><img src="img/head.png" alt="排行榜用户头像" /></div>
+                        <span>用户名</span>
+                        <span>兼职数量</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>-->
+
+    <!--页脚，版权等问题-->
+    <div class="footer">
+        <div class="footer">
+            <div class="footer_right">
+                <span>&copy;2015-2015</span> <a href="index.html">诚客兼职 </a> 版权所有<span> 渝ICP备15004777号-1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="download">
+    <div class="download_top">
+        <span><a href="javascript:;">X</a></span>
+    </div>
+    <div class="download_left">
+        <span>扫描二维码下载</span>
+        <img src="img/android.png" alt="二维码" />
+    </div>
+    <div class="download_line"></div>
+    <div class="download_right">
+        <ul>
+            <li><a href="#">android版下载</a></li>
+            <li><a href="#">ios版下载</a></li>
+    </ul></div>
+</div>
+<div class="mask"></div>
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script type="text/javascript">
+    (function($){
+        $(function(){
+            $('.button-collapse').sideNav({
+                menuWidth:300,
+                edge:'left',
+                closeOnClick:true
+            });
+            $('.parallax').parallax();
+
+            $.get('/heihei.php/home/job/webhotjob',"",function(json){
+                if(json.data != null){
+                        loadHot(json.data);
+                }
+            });
+        }); // end of document ready
+        function loadHot(data){
+            for(var i =0;i<data.length;i++){
+                $('.middle_hotinfo>ul').append(function(){
+                    var str = "<li><div class=\"middle_hotinfo_img\"><img src=\""+data[i].jobImg+"\" alt=\"热门兼职之发传单\" /></div><div class=\"middle_hotinfo_href\"><ul><li>"+data[i].jobName+"</li><li><b>待遇：</b>"+data[i].jobMoneyIntro+"</li><li><b>地点：</b>"+data[i].jobAddress+"</li></ul></div></li>";
+                    return str;
+                });
+            }
+
+
+        }
+    })(jQuery); // end of jQuery name space
+</script>
+
+<script>
+    $('#hotjob').click(function(){
+        $('html,body').animate({
+            scrollTop:$('#hot').offset().top
+        },1000);
+    });
+    $('#highPeo').click(function(){
+        $('html,body').animate({
+            scrollTop:$('#high').offset().top
+        },1000);
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+.brand-logo img{
+    margin: -5px 0 5px 0 ;
+}
+.input-field label{
+    font-size:24px;
+    color:#fff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #F75C2F;
+}
+.input-field input[type=password]:focus + label {
+    color: #F75C2F;
+}
+.input-field input[type=text] {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #F75C2F;
+    box-shadow: 0 1px 0 0 #F75C2F;
+}
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #F75C2F;
+    box-shadow: 0 1px 0 0 #F75C2F;
+}
+.input-field .prefix{
+    color:#fff;
+}
+.input-field .prefix.active {
+    color: #F75C2F;
+}
+nav li{
+    margin-left:10px;
+    float: left;;
+}
+nav li a{
+    border:none;
+    box-shadow:none;
+}
+.btn{
+    border:none;
+    box-shadow:none;
+}
+.btn:hover{
+    border:none;
+    box-shadow:none;
+}
+#search_box{
+    display: block;
+    position: relative;
+    margin-top:18%;
+}
+#poster{
+    display: block;
+    position: relative;
+    margin-top:8%;
+}
+.parallax-container {
+    height: 550px;
+    max-height:600px;
+}
+.label_box{
+    width:100%;
+    height:50px;
+    min-height: 50px;
+}
+.mdi-action-lock,.mdi-action-account-box{
+    color:#fff;
+    width:48%;
+    position:absolute;
+    left:0;
+    top:8px;
+}
+.input-field label{
+    position: absolute;
+    left:8%;
+    display: block;
+    width:48%;
+}

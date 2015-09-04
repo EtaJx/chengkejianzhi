@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>专题</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="兼职，大学生，真实，100%，无中介" />
+    <meta name="description" content="" />
+    <!--主页可被检索，页面上链接可被查询-->
+    <meta name="robots" content="index,follow" />
+    <!--使用goole内核进行渲染-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+    <!--移动端页面-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimun-scale=0.3,maximum-scale=2.0,user-scalable=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capanle" />
+    <meta content="black" name="apple-mobile-apps-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--图标显示-->
+    <link rel="shortcut icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/css/bootstrap-theme.min.css" />
+
+    <!-- Bootstrap Admin Theme -->
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/bootstrap-admin-theme.css" />
+    <link rel="stylesheet" media="screen" href=../bootstrap-3.3/bootstrap-admin-theme-change-size.css"/>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" media="screen" href="bootstrap-3.3/DT_bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../script/html5shiv.js"></script>
+    <script type="text/javascript" src="../script/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+    .col-md-3{
+        margin:1%;
+    }
+    .errorText{
+        border:1px solid #ff0000;
+    }
+</style>
+<body class="bootstrap-admin-with-small-navbar">
+<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-hover="dropdown"> <i class="glyphicon glyphicon-user"></i> <span id="username">用户名</span> <i class="caret"></i></a>
+                            <ul class="dropdown-menu">
+                                <!--<li><a href="forms.html">发布兼职</a></li>
+                                <li><a href="userprofile.html">编辑个人资料</a></li>-->
+                                <li><a href="index.html">注销</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <a class="navbar-brand" href="index.html">诚客兼职</a>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <!--left nav-->
+        <div class="col-md-2 col-sm-2 col-xs-2 bootstrap-admin-col-left pull-left" style="height:1000px;max-height:800px;">
+            <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
+                <li class="active">
+                    <a href="subjectJob.html"><i class="glyphicon glyphicon-chevron-right"></i> 兼职专题管理</a>
+                </li>
+                <li >
+                    <a href="subjectJobMag.html"><i class="glyphicon glyphicon-chevron-right"></i> 专题兼职管理</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="pic_box col-md-10 col-sm-10 col-xs-10" style="">
+            <!--<div class="row">-->
+            <!--job list-->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-header" style="display: inline-block;float:left;">
+                        <h1>专题</h1>
+                        <a href="javascript:;" class="btn btn-primary btn-sm" style="display: inline-block;float:left;margin:10px 0 0 0;" role="button" data-toggle="modal" data-target="#recommendJob">添加兼职专题</a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list-grounp">
+            </ul>
+
+
+            <!--<ul class="pagination col-md-12 col-sm-12 col-xs-12" style="display: block;clear: both;margin-left:55%;">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>-->
+        </div>
+
+    </div>
+    <div class="footer" style="padding:10px 0 0 0;border:none;position: relative;">
+        <div class="footer">
+            <div class="footer_right">
+                <span>&copy;2015-2015</span> <a href="index.html">诚客兼职 </a> 版权所有<span> 渝ICP备15004777号-1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--添加推荐兼职专题-->
+<div class="modal fade" id="recommendJob" tabindex="-1" role="dialog" aria-labelledby="recoomedLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="recoomedLabel">新增兼职专题</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="subList">
+                    <!--<div class="form-group">
+                        <label for="" >兼职专题图片：</label>
+                        <input type="text" id="" name="" class="form-control" placeholder="请输入兼职专题图片的url"/>
+                    </div>-->
+                    <div class="form-group">
+                        <label for="title" >新的兼职专题图片url：</label>
+                        <input type="text" id="newPic" name="kindImg" class="form-control" placeholder="请输入兼职专题的名称"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="title" >新的兼职专题名称：</label>
+                        <input type="text" id="newTitle" name="title" class="form-control" placeholder="请输入兼职专题的名称"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="intro">新的专题副标题</label>
+                        <input type="text" id="newSubTitle" name="subTitle" class="form-control" placeholder="请输入专题副标题" />
+                    </div>
+                    <div class="form-group">
+                        <label for="subTitle"  style="clear:both;display: block;">简介：</label>
+                        <textarea rows="20" cols="84" id="introText"
+                                style="clear:both;display: block;"></textarea>
+                        <input type="hidden" id="intro" name="intro" class="form-control" placeholder="请输入专题副标题" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="subBtn">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--编辑-->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="editLabel">专题名字</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="editForm">
+                    <!--<div class="form-group">
+                        <label for="" >兼职专题图片：</label>
+                        <input type="text" id="" name="" class="form-control" placeholder="请输入兼职专题图片的url"/>
+                    </div>-->
+                    <div class="form-group">
+                        <label for="title" >兼职专题名称：</label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="请输入兼职专题的名称"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="subTitle">请输入专题副标题</label>
+                        <input type="text" id="subTitle" name="subTitle" class="form-control" placeholder="请输入专题副标题" />
+                    </div>
+                    <div class="form-group">
+                        <label for="intro"  style="clear:both;display: block;">简介：</label>
+                        <textarea style="width:100%;height:150px;min-height:150px;" id="eintroText" style="clear:both;display: block;"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="editSub">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除-->
+<div class="modal fade" id="cancel" tabindex="-1" role="dialog" aria-labelledby="cancelJob" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                删除专题
+            </div>
+
+            <div class="modal-body">
+                确认删除该专题？
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancelBtn">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../script/twitter-bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="../script/bootstrap-admin-theme-change-size.js"></script>
+<script type="text/javascript" src="../script/f/loadSub.js"></script>
+</body>
+</html>

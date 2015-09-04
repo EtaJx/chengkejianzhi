@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>推荐兼职</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="兼职，大学生，真实，100%，无中介" />
+    <meta name="description" content="" />
+    <!--主页可被检索，页面上链接可被查询-->
+    <meta name="robots" content="index,follow" />
+    <!--使用goole内核进行渲染-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+    <!--移动端页面-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimun-scale=0.3,maximum-scale=2.0,user-scalable=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capanle" />
+    <meta content="black" name="apple-mobile-apps-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--图标显示-->
+    <link rel="shortcut icon" href="../img/icon.png" />
+    <link rel="stylesheet" href=../css/style.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/css/bootstrap-theme.min.css" />
+
+    <!-- Bootstrap Admin Theme -->
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/bootstrap-admin-theme.css" />
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/bootstrap-admin-theme-change-size.css"/>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" media="screen" href="../bootstrap-3.3/DT_bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../script/html5shiv.js"></script>
+    <script type="text/javascript" src="../script/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+    .col-md-3{
+        margin:1%;
+    }
+    .thumbnail img{
+        width:200px;
+        max-width: 200px;
+        height:140px;
+        max-height: 140px;
+    }
+</style>
+<body class="bootstrap-admin-with-small-navbar">
+<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-hover="dropdown"> <i class="glyphicon glyphicon-user"></i> <span id="username">用户名</span> <i class="caret"></i></a>
+                            <ul class="dropdown-menu">
+                                <!--<li><a href="forms.html">发布兼职</a></li>
+                                <li><a href="userprofile.html">编辑个人资料</a></li>-->
+                                <li><a href="index.html">注销</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <a class="navbar-brand" href="index.html">诚客兼职</a>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</nav>
+
+<div class="container">
+    <div class="row">
+    <!--left nav-->
+        <div class="col-md-2 col-sm-2 col-xs-2 bootstrap-admin-col-left pull-left" style="height:1000px;max-height:800px;">
+            <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
+                <!--<li>
+                    <a href="userprofile.html"><i class="glyphicon glyphicon-chevron-right"></i> 编辑个人资料</a>
+                </li>
+                <li>
+                    <a href="forms.html"><i class="glyphicon glyphicon-chevron-right"></i>发布兼职</a>
+                </li>
+                <li>
+                    <a href="tables.html"><i class="glyphicon glyphicon-chevron-right"></i> 已发布的兼职</a>
+                </li>-->
+                <li>
+                    <a href="subjectJob.html"><i class="glyphicon glyphicon-chevron-right"></i> 兼职专题管理</a>
+                </li>
+                <li class="active">
+                    <a href="recommendJob.html"><i class="glyphicon glyphicon-chevron-right"></i> 专题兼职管理</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="pic_box col-md-10 col-sm-10 col-xs-10" style="">
+            <!--<div class="row">-->
+
+                <!--job list-->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-header" style="display: inline-block;float:left;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4>选择兼职专题</h4>
+                        <form style="margin: 2% 0 0 0;" id="subList">
+                            <div class="form-group pull-left">
+                                <select class="form-control" name="kid" id="subId" onchange="selecSub(this.value);">
+                                    <option value="1">推荐兼职</option>
+                                </select>
+                                <input type="hidden" name="jobId" />
+                                <!--<a style="margin: 5% 0 0 0;" class="btn btn-primary btn-sm" role="button" id="selectBtn">确定选择</a>-->
+                        </div>
+                        </form>
+                    </div>
+                    <a class="btn btn-primary btn-sm" role="button" data-target="#addJob" data-toggle="modal" id="addBtn">添加兼职</a>
+                </div>
+            </div>
+
+            <!--<ul class="pagination col-md-12 col-sm-12 col-xs-12" style="display: block;clear: both;">
+                &lt;!&ndash;<li><a href="javascript:;">&laquo;</a></li>&ndash;&gt;
+                &lt;!&ndash;<li><a href="javascript:;">&raquo;</a></li>&ndash;&gt;
+            </ul>-->
+        </div>
+
+    </div>
+    <div class="footer" style="padding:10px 0 0 0;border:none;position: relative;">
+        <div class="footer">
+            <div class="footer_right">
+                <span>&copy;2015-2015</span> <a href="index.html">诚客兼职 </a> 版权所有<span> 渝ICP备15004777号-1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--添加兼职-->
+<div class="modal fade" id="addJob" tabindex="-1" role="dialog" aria-labelledby="addJob" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4>添加兼职</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="addForm">
+                    <ul class="list-grounp">
+                    </ul>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <a class="btn btn-default btn-sm" role="button" data-dismiss="modal">关闭</a>
+                <a class="btn btn-primary btn-sm" role="button" data-dismiss="modal" id="addJobBtn">添加</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除-->
+<div class="modal fade" id="deleteJob" tabindex="-1" role="dialog" aria-labelledby="deleteJobLabel" aria-hidden="true"  >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                删除该兼职
+            </div>
+
+            <div class="modal-body">
+                确认删除该兼职？
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="deleteBtn">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+
+<script>
+    $(document).ready(
+            $.ajax({
+                type:"GET",
+                dataType:"json",
+                data:"",
+                url:"/heihei.php/home/Job/topicList",
+                success:function(json){
+                    if(json.data != null){
+                        loadOption(json.data);
+                    }
+                },
+                error:function(){
+                    alert('加载失败');
+                }
+            })
+    );
+
+
+    function loadOption(data){
+            for(var i =0 ;i<data.length;i++){
+                $('select').append(function(){
+                    var str = "<option value=\""+data[i].id+"\">"+data[i].title+"</option>";
+                    return str;
+                });
+            }
+
+    }
+
+   function selecSub(e){
+       $('.col-md-12').siblings().remove();
+        $.ajax({
+            type:"POST",
+            dataType:'json',
+            data:{kid:e},
+            url:"/heihei.php/back/Topic/topicItemList",
+            success:function(json){
+                if(json.data == null){
+                    $('.col-md-12').siblings().remove();
+                }else {
+                    loadInfo(json.data);
+                }
+            },
+            error:function(){
+                alert('加载失败');
+            }
+        });
+    }
+
+    function valueArr(){
+        var arr = new Array();
+        for(var i = 0;i<$('.checkbox').length;i++){
+            if($('#job'+i).is(':checked')){
+                arr.push($('#job'+i).val());
+            }
+        }
+        if(arr.length !=0){
+            return arr;
+        }else{
+            alert("请选择");
+            return false;
+        }
+
+    }
+//    添加兼职按钮提交时间
+$('#addJobBtn').bind('click',function(){
+    $.ajax({
+        type:"POST",
+        dataType:"json",
+        data:{kid:$('#subId').val(),jobId:valueArr()},
+        url:'/heihei.php/back/Topic/topicAddItem',
+            success:function(json){
+                    if(json != null){
+                        if(json.status == 200){
+                            alert("添加成功");
+                            location.reload();
+                        }else{
+                            alert('发生错误');
+                        }
+                    }
+                },
+        error:function(){
+            alert('加载失败');
+        }
+    });
+});
+
+</script>
+<script type="text/javascript" src="../bootstrap-3.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../script/twitter-bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="../cript/bootstrap-admin-theme-change-size.js"></script>
+<script type="text/javascript" src="../script/f/loadList.js"></script>
+
+</body>
+</html>

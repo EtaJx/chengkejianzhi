@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>已发布兼职</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="兼职，大学生，真实，100%，无中介" />
+        <meta name="description" content="" />
+        <!--主页可被检索，页面上链接可被查询-->
+        <meta name="robots" content="index,follow" />
+        <!--使用goole内核进行渲染-->
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+        <!--移动端页面-->
+        <meta name="viewport" content="width=device-width,initial-scale=0.5,minimun-scale=0.3,maximum-scale=2.0,user-scalable=yes" />
+        <meta content="yes" name="apple-mobile-web-app-capanle" />
+        <meta content="black" name="apple-mobile-apps-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <!--图标显示-->
+        <link rel="shortcut icon" href="img/icon.png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/signup.css" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" media="screen" href="bootstrap-3.3/css/bootstrap.min.css" />
+        <link rel="stylesheet" media="screen" href="bootstrap-3.3/css/bootstrap-theme.min.css" />
+
+        <!-- Bootstrap Admin Theme -->
+        <link rel="stylesheet" media="screen" href="bootstrap-3.3/bootstrap-admin-theme.css" />
+        <link rel="stylesheet" media="screen" href="bootstrap-3.3/bootstrap-admin-theme-change-size.css"/>
+
+        <!-- Datatables -->
+        <link rel="stylesheet" media="screen" href="bootstrap-3.3/DT_bootstrap.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+           <script type="text/javascript" src="script/html5shiv.js"></script>
+           <script type="text/javascript" src="script/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <style>
+        .complete{
+            color:green;
+        }
+        .uncomplete{
+            color:red;
+        }
+    </style>
+    <body class="bootstrap-admin-with-small-navbar">
+        <!-- small navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar-sm" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" role="button" class="dropdown-toggle" data-hover="dropdown"> <i class="glyphicon glyphicon-user"></i> <span id="username">用户名</span> <i class="caret"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="forms.html">发布兼职</a></li>
+                                        <li><a href="userprofile.html">编辑个人资料</a></li>
+                                        <li><a href="tables.html">已发布的兼职</a></li>
+                                        <li><a href="index.html">注销</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main / large navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top bootstrap-admin-navbar bootstrap-admin-navbar-under-small" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="navbar-brand" href="index.html">诚客兼职</a>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container">
+            <!-- left, vertical navbar & content -->
+            <div class="row">
+                <!-- left, vertical navbar -->
+                <div class="col-md-2 bootstrap-admin-col-left">
+                    <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
+                        <li>
+                            <a href="userprofile.html"><i class="glyphicon glyphicon-chevron-right"></i> 编辑个人资料</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="glyphicon glyphicon-chevron-right"></i>发布兼职</a>
+                        </li>
+                        <li class="active">
+                            <a href="tables.html"><i class="glyphicon glyphicon-chevron-right"></i> 已发布的兼职</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- content -->
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="page-header">
+                                <h1>已发布兼职一览</h1>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="text-muted bootstrap-admin-box-title">已发布兼职状态</div>
+                                </div>
+                                <div class="bootstrap-admin-panel-content">
+                                    <table class="table bootstrap-admin-table-with-actions">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>兼职名称</th>
+                                                <th>报名截止日期</th>
+                                                <th>开始日期</th>
+                                                <th>薪资</th>
+                                                <th>招聘人数</th>
+                                                <th>报名人数</th>
+                                                <th>状态</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--分页-->
+                            <!--<ul class="pagination" id="pages">
+                                <li>
+                                    <a href="javascript:;" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">2</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">4</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--页脚，版权等问题-->
+            <div class="footer">
+                <div class="footer">
+                    <div class="footer_right">
+                        <span>&copy;2015-2015</span> <a href="index.html">诚客兼职 </a> 版权所有<span> 渝ICP备15004777号-1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--编辑-->
+        <div class="modal fade" id="changeJob" tabindex="-1" role="modal" aria-hidden="true" aria-labelledby="changeJob">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4>修改兼职</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <iframe id="chJob" src="changeJob.html" style="width:100%;height:720px;min-height:720px;" frameborder="0"></iframe>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitButton">提交</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--删除-->
+        <div class="modal fade" id="deleteJob" tabindex="-1" role="dialog" aria-labelledby="deleteJob" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        删除兼职
+                    </div>
+
+                    <div class="modal-body">
+                        确认该兼职已完成？
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="delBtn">已完成</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="script/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="bootstrap-3.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="script/bootstrap-admin-theme-change-size.js"></script>
+        <!--check cookie-->
+        <script type="text/javascript" src="script/getCookie.js"></script>
+        <script>
+            var cookiename = getCookieObj();
+            if(cookiename.here){
+                document.getElementById('username').innerHTML = decodeURI(cookiename.here);
+            }else{
+                window.location = 'firm-index.html';
+            }
+        </script>
+    <script type="text/javascript" src="script/displayJob.js"></script>
+    <script>
+        document.getElementById('chJob').contentWindow.onload = function(){
+            setCh;
+        }
+        //返回对象
+        function obj(str){
+            var Obj = document.getElementById('chJob').contentWindow.document.getElementById(str);
+            return Obj;
+        }
+
+        function changeJob() {
+            $.post('/heihei.php/home/Job/jobItem', {jobId: window.chId}, function (json) {
+                if (json != null) {
+//                    alert(json.info);
+                    obj('jobName').value = json.data.jobName;
+                    obj('Type').value = json.data.jobType;
+                    obj('jobJob').value = json.data.jobJob;
+                    obj('jobImgText').value = json.data.jobImg;
+                    obj('jobApplyCount').value = json.data.jobNeedNum;
+                    obj('jobMoney').value = json.data.jobMoneyIntro;
+                    obj('jobMoneyTatol').value = json.data.jobMoney;
+                    obj('jobDeadline').value = getTime(json.data.jobDeadline);
+                    obj('jobBegin').value = getTime(json.data.jobBegin);
+                    obj('jobEnd').value =getTime(json.data.jobEnd);
+                    obj('jobTime').value = json.data.jobTime;
+                    obj('jobAddCode').value = json.data.jobAddCode;
+                    obj('jobAddress').value = json.data.jobAddress;
+                    obj('job_info').value = json.data.jobIntro;
+                    obj('job_request').value = json.data.jobNeed;
+                }
+            })
+        }
+        function setCh(id){
+            window.chId = id;
+            changeJob();
+        }
+//        时间戳的转换
+        function getTime(time){
+            return new Date(parseInt(time) * 1000).toLocaleDateString().replace("/", "-").replace("/","-");
+        }
+
+//        修改后的提交
+        $('#submitButton').bind('click',function(){
+            var city = obj('city').value;
+            var province = obj('province').value;
+            var district = obj('district').value;
+//    alert(district);
+            if(district == null ||district == "" || district == "--请选择--") {
+                district = city;
+            }
+            if(city == null || city=="" || city=="--请选择--"){
+                district = province;
+            }
+            $.get("/heihei.php/home/job/getCityCode",'city='+district,function(json){
+                if(json.data.length != 0){
+                    obj('jobAddCode').value = json.data;
+                }else{
+                    alert(json.info);
+                }
+            });
+            if(document.getElementById('chJob').contentWindow.check()){
+                $.post('/heihei.php/home/Seller/chJob',document.getElementById('chJob').contentWindow.$('form').serialize()+'&jobId='+window.chId,function(json){
+                    if(json.status == 200){
+                        alert('提交成功(●˘◡˘●)');
+                        location.reload();
+                    }else{
+                        alert(json.info);
+                    }
+                });
+            }else{
+                alert("请检测你的数据");
+                return false;
+            }
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>下载APP</title>
+    <meta name="keywords" content="兼职，大学生，真实，100%，无中介" />
+    <meta name="description" content="" />
+    <!--主页可被检索，页面上链接可被查询-->
+    <meta name="robots" content="index,follow" />
+    <!--使用goole内核进行渲染-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+    <!--移动端页面-->
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.3,maximum-scale=2.0,user-scalable=yes" />
+    <meta content="yes" name="apple-mobile-web-app-capanle" />
+    <meta content="black" name="apple-mobile-apps-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+</head>
+<style>
+    html,body{
+        height:100%;
+        /*height:2000px;*/
+        background: url('img/texture.png')repeat scroll 0 0 #fff;
+    }
+    .content{
+        overflow: hidden;
+        height:100%;
+        position: relative;
+        width:100%;
+        /*height:auto;*/
+        display: block;
+        clear: both;overflow: hidden;
+    }
+    .header{
+        padding:10% 0 0 0;
+        display: block;;
+        outline: none;
+        width:100%;
+        height: auto;
+    }
+    .header img{
+        width:100%;
+        height:auto;
+    }
+    .download{
+        width:100%;
+        position: relative;
+        margin-top:30%;
+    }
+    .download span{
+        display: block;
+        clear: both;
+        color:#666;
+        font-size: 5vw;
+        font-family: "微软雅黑";
+    }
+    .downloadBtn{
+        padding:5%;
+        display: block;
+        width:100%;
+        clear: both;
+    }
+    .downloadBtn a{
+        margin:0 auto;
+        width:50%;
+        display: block;
+        background: url('img/downloadBtn.png') no-repeat scroll 50% 50% #f75c2f;
+        height:64px;
+        border: 1px solid #ccc;
+        padding:10% 0 0 0;
+        border-radius: 20px;;
+        box-shadow: 2px 2px 0 #666;
+        /*transition: all*/
+    }
+    .mask{
+        display: none;
+        top:0;
+        left:0;
+        height:1900px;
+        width:100%;
+        z-index: 9998;
+        position:absolute;
+        background: #000;
+        opacity:.8;
+    }
+    .tip{
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        top:20%;
+        left:30%;
+    }
+</style>
+<body>
+<div class="content">
+    <div class="header">
+        <img src="img/app.png" alt="下载APP" />
+    </div>
+
+    <div class="download">
+        <span>(●˘◡˘●)目前只支持android版：</span>
+        <div class="downloadBtn">
+            <a href="http://apps.wandoujia.com/apps/com.ant.jobgod.jobgod/download" title="app下载链接" id="app"></a>
+        </div>
+        <p></p>
+    </div>
+
+    <div class="tip" id="tip">
+        <img src="img/apptip.png" alt="app tip" />
+    </div>
+    <div class="mask" id="mask"></div>
+</div>
+
+<script>
+    window.onload = function() {
+     var app = document.getElementById('app');
+     //        var p = document.getElementsByTagName('p');
+     var tip = document.getElementById('tip');
+     var mask = document.getElementById('mask');
+     app.onclick = function(){
+     if(isWeixin()){
+     //
+     mask.style.display = "block";
+     tip.style.display = "block";
+     return false;
+     //                p[0].innerHTML = window.navigator.userAgent;
+     }else{
+     //                p[0].innerHTML = window.navigator.userAgent;
+     }
+
+     };
+     function isWeixin(){
+     var ua = window.navigator.userAgent.toLowerCase();
+     if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+     return true;
+     }else{
+     return false;
+     }
+     }
+     }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

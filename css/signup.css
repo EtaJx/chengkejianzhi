@@ -1,0 +1,308 @@
+.signup_top{
+    position: absolute;
+    padding:5px;
+    top:0;
+    width:99%;
+    max-width: 1366px;
+    background: url("../img/texture.png") repeat scroll 0 0 #FCFAF2!important;
+    height:70px;
+    min-height:70px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.top_header{
+    width:99%;
+    /*background: url("../img/texture.png") repeat scroll 0 0 #FCFAF2!important;*/
+    /*margin-top:10px;*/
+    /*box-shadow: 1px 1px 2px #666;*/
+}
+.top_header_nav a{
+    color: #F75C2F !important;
+}
+.top_header_nav li{
+    line-height: 3.2;
+}
+.top_header_dialog a{
+    color: #F75C2F !important;
+}
+
+.top_logo a img{
+    border-radius:10px;
+}
+
+/*signup before*/
+.sign-before{
+    position: relative;
+    width:100% ;
+    height: 600px;
+    clear : both;
+    background: url("../img/texture.png") #F75C2F repeat scroll 0 0!important;
+}
+.sign-before-right{
+    position: absolute;
+    left:20%;
+    top:10%;
+}
+.sign-before-left{
+    position: absolute;
+    width:28%;
+    height:380px;
+    left:60%;
+    top:27%;
+    font-family: "微软雅黑";
+    border-radius: 5px;
+    box-shadow:  2px 2px 2px #666;
+    background: url("../img/texture.png") repeat scroll 0 0 #FB966E!important;
+}
+.sign-before-left-title{
+    width:100%;
+    text-align: center;
+}
+.sign-before-left-title h3{
+    width:15%;
+    display: block;
+    margin: 0 auto;
+    padding:10px 0 10px 0;
+}
+.sign-before-left-form{
+    width:100%;
+}
+.sign-before-left-form ul{
+    list-style: none;
+}
+.sign-before-left-form ul li{
+    width:92%;
+    margin:6% 0 0 0;
+}
+ .errorTips{
+    display: block;
+    clear: both;
+    color:#ff0000;
+    width:58%;
+    height:14px;
+    margin:10px 0 0 36%;
+}
+.sign-before-left-form ul li a{
+    text-indent: -9999px;
+    width:50%;
+    padding:1% 0 1% 0;
+    text-align: center;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #666;
+    background: url("../img/hover.png") no-repeat scroll 50% 0 #ccc!important;
+    margin: 10px 0 0 32%;
+
+    transition: all 0.3s ease-in-out;
+}
+.sign-before-left-form ul li a:hover{
+    background: url("../img/nohover.png") no-repeat scroll 50% 0 #F75C2F!important;
+    border: 1px solid #F75C2F;
+}
+.sign-before-left-form ul li label{
+    width:30%;
+    text-align: right;
+}
+.sign-before-left-form ul li input{
+    border:1px solid #ccc;
+    border-radius: 5px;
+    padding:5px;
+    outline: none;
+    width:66%;
+}
+.sign-before-left-tips{
+    width:40%;
+    margin:10px 0 0 38%;
+    color: #666;
+}
+
+/*signup*/
+.submit_btn{
+    padding:10px;
+    position: relative;
+    left:50%;
+}
+.form_style{
+    position: relative;
+    left:15%;
+}
+textarea{
+    resize: none;
+}
+.page-header{
+    width:100%;
+}
+
+.page-header img{
+    position: relative;
+    margin-left: 11%;
+}
+
+/*sign-after*/
+.sign-after{
+    background: url("../img/texture.png") repeat scroll 0  0 #FCFAF2 !important;
+    position: relative;
+    /*border:1px solid #ccc;*/
+    display:block;
+    margin: 0 auto;
+    width:100%;
+    height:520px;
+}
+.sign-after-secceed{
+    position: absolute;
+    top:30%;
+    left:30%;
+    width:30%;
+    display: block;
+    margin:0 auto;
+    /*border:1px solid #ccc;*/
+    overflow: hidden;
+}
+
+.sign-after-secceed2{
+    position: absolute;
+    top:40%;
+    left:40%;
+    width:30%;
+    display: block;
+    margin:0 auto;
+    /*border:1px solid #ccc;*/
+    overflow: hidden;
+    color: #ccc;
+    font-size: 1.5em;
+    line-height: 1.1;
+}
+.sign-after-secceed2 a{
+    font-family: "微软雅黑";
+    text-decoration: none;
+    /*display: inline-block;*/
+    display: block;
+    color:#666;
+
+    transition:all 0.3s ease-in-out;
+}
+.sign-after-secceed2 a:hover{
+    text-decoration: none;
+    color:#F75C2F;
+}
+
+.login-left{
+    width:36%;
+    position: absolute;
+    left:16%;
+    top:14%;
+}
+.login-left img{
+    width:100%;
+}
+#login-button{
+    outline: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    width:50%;
+    padding:2% 0 5% 0;
+    text-align: center;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #666;
+    background: url("../img/login_after.png") no-repeat scroll 50% 0 !important;
+    margin: 10px 0 0 32%;
+
+    transition: all 0.3s ease-in-out;
+}
+#login-button:hover{
+    background: url("../img/login-before.png") no-repeat scroll 50% 0 #F75C2F !important;
+    border: 1px solid #E83015;
+}
+
+/*textarea*/
+.errotip{
+    border: 2px solid #ff0000;
+}
+/*correct email*/
+.correct{
+    display: block;
+    clear: both;
+    color:#00C957;
+    width:58%;
+    height:14px;
+    margin:10px 0 0 36%;
+}
+
+
+@media (max-width:1200px){
+    .top_header_dialog{
+        /*display:none;*/
+        font-size:1.2vw;
+    }
+    .sign-before-left-title h3{
+        font-size: 1.5vw;
+    }
+    .sign-before-left-form ul li{
+        position: relative;
+        float:none;
+    }
+    .sign-before-left-form ul li label{
+        text-align: left;
+        width:100%;
+        display: block;
+        font-size: .8vw;
+    }
+    .sign-before-left-form ul li input{
+        width:100%;
+    }
+    .sign-before-left-form ul li a{
+        text-indent: 9999em;
+        position: absolute;
+        left:-10%;
+        display: block;
+        width:200%;
+        content: "登录";
+    }
+    .errorTips{
+        font-size:1vw;
+        width:100%;
+        display: block;
+        margin-left:0;
+    }
+    .sign-before-left-tips{
+        top:90%;
+        position: absolute;
+        display: block;
+        clear: both;
+        margin-left: 23%;
+        width:100%;
+        font-size:1vw;
+    }
+    .sign-before-left{
+        height:350px;
+    }
+    .login-left{
+        top:35%;
+    }
+    #signButton{
+        text-indent: -9999em;
+        width:50%;
+      margin-left:20%;
+    }
+    #sign-before{
+        height:600px;
+    }
+}
+@media (max-width:900px){
+    .sign-before-left{
+        height:300px;
+    }
+}
+
+@media (max-width:640px){
+    *{
+        font-size: 2vw;
+    }
+    .top_header_dialog{
+        display: none;
+    }
+}
